@@ -1,0 +1,342 @@
+/* COMP1073 Assignment 3
+Student Id: 200564426
+Student Name: Marcos Oliveira Mota
+Created on: 2024-11-23 */
+
+/* Style of the whole html and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+}
+
+/* Style for the navbar and its components */
+nav {
+    background: rgba(230, 247, 245, 1);
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.company-name {
+    color: #2c3e50;
+    font-size: 1.5em;
+    font-family: 'Lobster', cursive;
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.options a {
+    color: #2c3e50;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+.options a:hover {
+    border-bottom: 2px solid #2c3e50;
+    color: rgba(252, 135, 193, 0.973);
+}
+
+/* Style for the main */
+
+main {
+    flex: 1;
+    padding: 80px 20px 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the welcome content */
+
+.welcome {
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/smoothie-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text {
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-text-site-name {
+    font-family: 'Lobster', cursive;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+}
+
+/* Style for the images and texts */
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.content-item img {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.content-item img:hover {
+    transform: scale(1.1);
+}
+
+.content-text {
+    margin: 0 30px;
+    max-width: 400px;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    color: #333;
+    text-align: center;
+}
+
+.required {
+    color: red;
+}
+
+.form-label-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.content form {
+    min-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.input-checkbox-radio {
+    margin-right: 5px;
+}
+  
+.label-checkbox-radio {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.image-checkbox-radio {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.form-label-title {
+    display: block;
+    margin-top: 10px;
+}
+
+.content select {
+    margin-top: 5px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-button:hover {
+    background-color: #2ecc71;
+}
+
+#orderSummary {
+    margin: 0 auto 40px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fffbe6;
+}
+
+.subscribe-input-label {
+    margin-right: 10px;
+}
+
+.subscribe-input-box {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.subscribe-input-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-input-button:hover {
+    background-color: #2ecc71;
+}
+
+/* Style for the footer */
+
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-menu {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.footer-menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+    color: rgba(252, 135, 193, 0.973);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-label img {
+    margin-right: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+
+    .content form {
+        min-width: 0;
+    }
+
+}
